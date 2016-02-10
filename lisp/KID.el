@@ -11,12 +11,12 @@
         )
       )
 (setq org-todo-keyword-faces ;; 设置状态的字体颜色
-      '(("TODO" . (:background "black" :foreground "red" :weight bold))
-        ("NEXT" . (:background "black" :foreground "DarkOrange" :weight bold))
-        ("WAITTING" . (:background "black" :foreground "white" :weight bold))
-        ("SOMEDAY" . (:background "black" :foreground "DarkGreen" :weight bold))
-        ("DONE" . (:background "black" :foreground "LightGreen" :weight bold))
-        ("ABORT" . (:background "black" :foreground "gray" :weight bold))
+      '(("TODO" . (:background "1B1D1E" :foreground "red" :weight bold))
+        ("NEXT" . (:background "1B1D1E" :foreground "DarkOrange" :weight bold))
+        ("WAITTING" . (:background "1B1D1E" :foreground "white" :weight bold))
+        ("SOMEDAY" . (:background "1B1D1E" :foreground "DarkGreen" :weight bold))
+        ("DONE" . (:background "1B1D1E" :foreground "LightGreen" :weight bold))
+        ("ABORT" . (:background "1B1D1E" :foreground "gray" :weight bold))
         )
       )
 
