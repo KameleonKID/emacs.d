@@ -24,6 +24,8 @@
       (list "~/workspace/org/gtd.org"
             ))
 
+(define-key global-map "\C-ca" 'org-agenda);; 设置日程表快捷键
+
 ;; emacs命令（用M-x调用）
 ;;; 打开文件
 (defun kid-emacsconfig () ;; 打开kid的emacs配置文件
