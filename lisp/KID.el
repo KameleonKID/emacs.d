@@ -21,7 +21,7 @@
       )
 
 (setq org-agenda-files ;; 设置org-mode的agenda view数据来源
-      (list "~/workspace/org/gtd.org"
+      (list "~/workspace/orgs/gtd.org"
             ))
 
 (define-key global-map "\C-ca" 'org-agenda);; 设置日程表快捷键
