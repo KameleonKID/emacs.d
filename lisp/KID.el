@@ -10,6 +10,15 @@
       '((sequence "TODO(t!)" "NEXT(n)" "WAITTING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")
         )
       )
+(setq org-todo-keyword-faces ;; 设置状态的字体颜色
+      '(("TODO" . (:background "black" :foreground "red" :weight bold))
+        ("NEXT" . (:background "black" :foreground "DarkOrange" :weight bold))
+        ("WAITTING" . (:background "black" :foreground "white" :weight bold))
+        ("SOMEDAY" . (:background "black" :foreground "DarkGreen" :weight bold))
+        ("DONE" . (:background "black" :foreground "LightGreen" :weight bold))
+        ("ABORT" . (:background "black" :foreground "gray" :weight bold))
+        )
+      )
 
 (setq org-agenda-files ;; 设置org-mode的agenda view数据来源
       (list "~/workspace/org/gtd.org"
