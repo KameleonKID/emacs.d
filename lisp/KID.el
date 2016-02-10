@@ -11,6 +11,10 @@
         )
       )
 
+(setq org-agenda-files ;; 设置org-mode的agenda view数据来源
+      (list "~/workspace/org/gtd.org"
+            ))
+
 ;; emacs命令（用M-x调用）
 ;;; 打开文件
 (defun kid-emacsconfig () ;; 打开kid的emacs配置文件
