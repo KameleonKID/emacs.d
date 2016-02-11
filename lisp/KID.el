@@ -7,16 +7,16 @@
 ;; org-mode 配置
 (setq org-startup-indented t) ;; 以更明了的形式显示标题，可以用M-x org-indent-mode切换，也可以在文件头部增加#+STARTUP:indent
 (setq org-todo-keywords ;;设置TODO的任务状态列表
-      '((sequence "TODO(t!)" "NEXT(n)" "WAITTING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")
+      '((sequence "TODO(t!)" "STARTED(s)" "WAITTING(w)" "|" "DONE(d)" "CANCELLED(c)" "DEFERRED(f)")
         )
       )
 (setq org-todo-keyword-faces ;; 设置状态的字体颜色
       '(("TODO" . (:foreground "red" :weight bold))
-        ("NEXT" . (:foreground "DarkOrange" :weight bold))
+        ("STARTED" . (:foreground "DarkOrange" :weight bold))
         ("WAITTING" . (:foreground "white" :weight bold))
-        ("SOMEDAY" . (:foreground "DarkGreen" :weight bold))
         ("DONE" . (:foreground "LightGreen" :weight bold))
-        ("ABORT" . (:foreground "gray" :weight bold))
+        ("CANCELLED" . (:foreground "gray" :weight bold))
+        ("DEFERRED" . (:foreground "DarkGreen" :weight bold))
         )
       )
 
