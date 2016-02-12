@@ -5,6 +5,14 @@
 ;; 开始
 
 ;; 全局
+;;; Setting English Font
+(set-face-attribute
+  'default nil :font "Monaco 14") 
+;;; Chinese Font(useless)
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "Helvetica" :size 10)))
 
 ;; org-mode 配置
 (setq org-startup-indented t) ;; 以更明了的形式显示标题，可以用M-x org-indent-mode切换，也可以在文件头部增加#+STARTUP:indent
