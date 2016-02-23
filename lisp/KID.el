@@ -12,16 +12,17 @@
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset
-                      (font-spec :family "Helvetica" :size 10)))
+                      (font-spec :family "Helvetica" :size 14)))
 
 ;; org-mode 配置
 (setq org-startup-indented t) ;; 以更明了的形式显示标题，可以用M-x org-indent-mode切换，也可以在文件头部增加#+STARTUP:indent
 (setq org-todo-keywords ;;设置TODO的任务状态列表
-      '((sequence "TODO(t!)" "STARTED(s)" "WAITTING(w)" "|" "DONE(d !)" "CANCELLED(c @/!)" "DEFERRED(f @/!)")
+      '((sequence "TODO(t!)" "PERIODIC(p)" "STARTED(s)" "WAITTING(w)" "|" "DONE(d !)" "CANCELLED(c @/!)" "DEFERRED(f @/!)" "IN(i)" "OUT(o)")
         )
       )
 (setq org-todo-keyword-faces ;; 设置状态的字体颜色
       '(("TODO" . (:foreground "red" :weight bold))
+        ("PERIODIC" . (:foreground "Violet" :weight bold))
         ("STARTED" . (:foreground "DarkOrange" :weight bold))
         ("WAITTING" . (:foreground "white" :weight bold))
         ("DONE" . (:foreground "LightGreen" :weight bold))
