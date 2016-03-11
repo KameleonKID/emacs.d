@@ -17,7 +17,7 @@
 ;; org-mode 配置
 (setq org-startup-indented t) ;; 以更明了的形式显示标题，可以用M-x org-indent-mode切换，也可以在文件头部增加#+STARTUP:indent
 (setq org-todo-keywords ;;设置TODO的任务状态列表
-      '((sequence "TODO(t!)" "PERIODIC(p)" "STARTED(s)" "WAITTING(w)" "|" "DONE(d !)" "CANCELLED(c @/!)" "DEFERRED(f @/!)" "IN(i)" "OUT(o)")
+      '((sequence "TODO(t!)" "PERIODIC(p)" "STARTED(s)" "WAITTING(w)" "|" "DONE(d !)" "CANCELLED(c @/!)" "DEFERRED(f @/!)" "IN(i @/!)" "OUT(o @/!)")
         )
       )
 (setq org-todo-keyword-faces ;; 设置状态的字体颜色
@@ -61,4 +61,5 @@
 
 
 ;; 结束
+(org-agenda-list )
 (provide 'KID)
