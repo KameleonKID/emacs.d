@@ -13,8 +13,17 @@
     (set-fontset-font (frame-parameter nil 'font)
                       charset
                       (font-spec :family "Helvetica" :size 14)))
-
+;;; 滚动行数(适用于有touchpad的mac)
+(defun up-slightly () (interactive) (scroll-up 1))
+(defun down-slightly () (interactive) (scroll-down 1))
+                                        ;;(global-set-key [mouse-4] 'down-slightly)
+                                        ;;(global-set-key [mouse-5] 'up-slightly)
+(global-set-key (kbd "<wheel-up>") 'up-slightly)
+(global-set-key (kbd "<wheel-down>") 'down-slightly)
+;;; 
+;;
 ;; org-mode 配置
+;;; todo-keywords
 (setq org-startup-indented t) ;; 以更明了的形式显示标题，可以用M-x org-indent-mode切换，也可以在文件头部增加#+STARTUP:indent
 (setq org-todo-keywords ;;设置TODO的任务状态列表
       '((sequence "TODO(t!)" "PERIODIC(p)" "STARTED(s)" "WAITTING(w)" "|" "DONE(d !)" "CANCELLED(c @/!)" "DEFERRED(f @/!)" "IN(i @/!)" "OUT(o @/!)")
@@ -43,16 +52,25 @@
   (interactive)
   (find-file "~/.emacs.d/lisp/KID.el")
   )
+(global-set-key (kbd "C-x C-k c") 'kid-emacsconfig)
 
 (defun kid-gtd () ;;打开gtd文件
   (interactive)
   (find-file "~/workspace/orgs/gtd.org")
   )
+(global-set-key (kbd "C-x C-k g") 'kid-gtd)
 
 (defun kid-help-org () ;; 打开org的教程
   (interactive)
   (find-file "~/workspace/orgs/org-mode-tutorial.org")
   )
+(global-set-key (kbd "C-x C-k h") 'kid-help-org)
+
+(defun kid-note ()
+  (interactive)
+  (find-file "~/workspace/note.org")
+  )
+(global-set-key (kbd "C-x C-k n") 'kid-note)
 
 (defun kid-reload ()
   (interactive)
