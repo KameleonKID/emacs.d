@@ -18,9 +18,26 @@
 (defun down-slightly () (interactive) (scroll-down 1))
                                         ;;(global-set-key [mouse-4] 'down-slightly)
                                         ;;(global-set-key [mouse-5] 'up-slightly)
-(global-set-key (kbd "<wheel-up>") 'up-slightly)
-(global-set-key (kbd "<wheel-down>") 'down-slightly)
-;;; 
+(global-set-key (kbd "<wheel-down>") 'up-slightly)
+(global-set-key (kbd "<wheel-up>") 'down-slightly)
+;;; 试着修正全角半角输入的问题
+;;;; 需要解决的字符： +-*/[]()
+(defun insert-char-a () (interactive) (insert-char 43))
+(defun insert-char-b () (interactive) (insert-char 45))
+(defun insert-char-c () (interactive) (insert-char 42))
+(defun insert-char-d () (interactive) (insert-char 47))
+(defun insert-char-e () (interactive) (insert-char 91))
+(defun insert-char-f () (interactive) (insert-char 93))
+(defun insert-char-g () (interactive) (insert-char 40))
+(defun insert-char-h () (interactive) (insert-char 41))
+(global-set-key (kbd "＋") 'insert-char-a)
+(global-set-key (kbd "－") 'insert-char-b)
+(global-set-key (kbd "＊") 'insert-char-c)
+(global-set-key (kbd "／") 'insert-char-d)
+(global-set-key (kbd "［") 'insert-char-e)
+(global-set-key (kbd "］") 'insert-char-f)
+(global-set-key (kbd "（") 'insert-char-g)
+(global-set-key (kbd "）") 'insert-char-h)
 ;;
 ;; org-mode 配置
 ;;; todo-keywords
